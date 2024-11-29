@@ -5,6 +5,10 @@ let myFn = "SAMUEL";
 let myLn = "VALDEZ";
 let wc = "WELCOME";
 
+let navbar = document.getElementById("nav-bar");
+navbar.style.display = "none"
+navbar.style.opacity = "0"
+
 function delay(ms){
     return new Promise(resolve=>setTimeout(resolve, ms));
 }
@@ -40,13 +44,16 @@ async function welcome() {
     }
 }
 
-async function moveTooltip() {
-    
+async function showNavBar() {
+    await delay(5500)
+    navbar.style.display = ""
+    navbar.style.opacity = "0"
+    await delay(500)
+    navbar.style.opacity = "1"
+    navbar.style.transition = ""
 }
 
-Promise.all([showFn(), showLn(), cls(fnH1, myFn, 40, 5000),cls(lnH1, myLn, 30, 4900), welcome()]);
-
-let navbar = document.getElementById("nav-bar");
+Promise.all([showFn(), showLn(), cls(fnH1, myFn, 40, 5000),cls(lnH1, myLn, 30, 4900), welcome(), showNavBar()]);
 
 navbar.addEventListener("mouseenter", ()=>{
     navbar.style.gap = "15%"
@@ -54,6 +61,8 @@ navbar.addEventListener("mouseenter", ()=>{
 navbar.addEventListener("mouseleave", ()=>{
     navbar.style.gap = ""
 })
+
+
 
 
 async function iThinkThisIsATooltip(input, basis){
