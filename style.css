@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "MADE tommy bold";
+    src: url("fonts/MADE\ TOMMY\ Black_PERSONAL\ USE.otf");
+}
+
+@font-face {
+    font-family: "MADE tommy outline";
+    src: url("fonts/MADE\ TOMMY\ Black\ Outline_PERSONAL\ USE.otf");
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body,html{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+#bg-vid{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+.name-cont{
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar{
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    transition: 0.5s;
+    & .links{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 80px;
+        & p{
+            color: white;
+            font-family: monospace;
+            font-size: 1.5em;
+            margin: 0;
+        }
+    }
+}
+
+.nav-bar .links p{
+    transition: 0.2s;
+}
+
+#fn, #ln{
+    font-size: 10vw;
+    margin: 0;
+    user-select: none;
+}
+
+#fn{
+    font-family: "MADE tommy outline";
+    color: white;
+}
+#ln{
+    font-family: "MADE tommy bold";
+    color: white;
+}
