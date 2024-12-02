@@ -7,6 +7,10 @@
     font-family: "MADE tommy outline";
     src: url("fonts/MADE\ TOMMY\ Black\ Outline_PERSONAL\ USE.otf");
 }
+@font-face {
+    font-family: "bizantheum";
+    src: url("fonts/quelia-trial.otf");
+}
 
 *{
     box-sizing: border-box;
@@ -17,6 +21,7 @@ body,html{
     width: 100vw;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 body::-webkit-scrollbar{
@@ -31,8 +36,48 @@ body::-webkit-scrollbar{
     z-index: -1;
 }
 
+main{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    & .inst{
+        font-size: 1em;
+        color:white;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-family: "bizantheum";
+        font-weight: 400;
+        font-size: 2em;
+        background: linear-gradient(45deg, white, 60%, rgb(255, 86, 86));
+        -webkit-background-clip: text;
+                background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 0.5s;
+    }
+    & .arrow-cont{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        & #arrowdown{
+            height: 50px;
+            transition: 0.3s;
+        }
+    }
+    & #arrowdown:hover{
+        transform: scale(1.05);
+    }
+}
+
 .name-cont{
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
@@ -62,8 +107,13 @@ body::-webkit-scrollbar{
             font-family: monospace;
             font-size: 1.5em;
             margin: 0;
+            
         }
     }
+    
+}
+.nav-bar:hover{
+    background-color: rgba(10,10,10,0.3);
 }
 
 .nav-bar .links p{
@@ -83,4 +133,28 @@ body::-webkit-scrollbar{
 #ln{
     font-family: "MADE tommy bold";
     color: white;
+    transition: 0.5s;
+}
+
+#ln:hover{
+    border: 0.5px white solid;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
+    transform: scale(1.05);
+}
+
+#footer{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
+    height: 30vh;
+    max-height: 400px;
+    width: 100%;
+    bottom: -100%;
+    left: 0;
+    z-index: 2;
+    transition: 0.3s;
 }
