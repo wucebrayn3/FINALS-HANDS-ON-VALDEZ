@@ -1,6 +1,8 @@
 let fnH1 = document.getElementById("fn");
 let lnH1 = document.getElementById("ln");
 
+let namecont = document.getElementById("namecont");
+
 let myFn = "SAMUEL";
 let myLn = "VALDEZ";
 let wc = "WELCOME";
@@ -16,6 +18,18 @@ arrowdown.style.display = "none"
 arrowdown.style.opacity = "0"
 
 let foot = document.querySelector("footer");
+
+let homecontent = document.querySelectorAll(".home-content img");
+homecontent.forEach(a=>{
+    a.style.opacity = "0"
+    a.style.display = "none"
+})
+
+let abtcontent = document.querySelectorAll(".about-content");
+abtcontent.forEach(a=>{
+    a.style.opacity = "0"
+    a.style.display = "none"
+})
 
 function delay(ms){
     return new Promise(resolve=>setTimeout(resolve, ms));
@@ -66,6 +80,24 @@ async function showNavBar() {
 
 Promise.all([showFn(), showLn(), cls(fnH1, myFn, 40, 5000),cls(lnH1, myLn, 30, 4900), welcome(), showNavBar()]);
 
+lnH1.addEventListener("click", ()=>{
+    namecont.style.position = "absolute"
+    namecont.style.top = "100px"
+    lnH1.style.fontSize = "5vw"
+    if (lnH1.textContent == "HOME"){
+        homecontent.forEach(a=>{
+            a.style.display = ""
+            a.style.opacity = "1"
+        })
+    }
+    else if (lnH1.textContent == "ABOUT"){
+        abtcontent.forEach(a=>{
+            a.style.display = ""
+            a.style.opacity = "1"
+        })
+    }
+})
+
 navbar.addEventListener("mouseenter", ()=>{
     navbar.style.gap = "15%"
 })
@@ -112,8 +144,18 @@ navbarlinks.forEach(a=>{
         })
     iThinkThisIsATooltip(a.id, wc)
     if (a.id == "HOME"){
-
+        
     }
+    homecontent.forEach(a=>{
+        a.style.display = "none"
+    })
+    abtcontent.forEach(a=>{
+        a.style.opacity = "0"
+        a.style.display = "none"
+    })
+    namecont.style.position = ""
+    namecont.style.top = ""
+    lnH1.style.fontSize = ""
     })
     a.addEventListener("mouseleave", ()=>{
         a.querySelectorAll("p").forEach(b=>{
@@ -175,4 +217,29 @@ arrowdown.addEventListener("click", ()=>{
 foot.addEventListener("mouseleave", ()=>{
     foot.style.transition = "1s"
     foot.style.bottom = ""
+})
+
+let fb = document.getElementById("fb");
+let ig = document.getElementById("ig");
+let gh = document.getElementById("gh");
+
+fb.addEventListener("mouseenter", ()=>{
+    fb.src = "images/facebook colored.png"
+})
+fb.addEventListener("mouseleave", ()=>{
+    fb.src = "images/facebook.png"
+})
+
+ig.addEventListener("mouseenter", ()=>{
+    ig.src = "images/instagram colored.png"
+})
+ig.addEventListener("mouseleave", ()=>{
+    ig.src = "images/instagram.png"
+})
+
+gh.addEventListener("mouseenter", ()=>{
+    gh.src = "images/github colored.png"
+})
+gh.addEventListener("mouseleave", ()=>{
+    gh.src = "images/github.png"
 })
