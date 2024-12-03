@@ -239,7 +239,7 @@ main{
         & img{
             /* width: 30vw; */
             /* height: 25vh; */
-            height: 100%;
+            width: 100%;
         }
     }
     & .home-content{
