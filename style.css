@@ -234,8 +234,12 @@ main{
     & .img-subcont{
         overflow: hidden;
         border-radius: 30px;
+        height: 25vh;
+        max-height: 500px;
         & img{
-            width: 30vw;
+            /* width: 30vw; */
+            /* height: 25vh; */
+            height: 100%;
         }
     }
     & .home-content{
