@@ -9,11 +9,11 @@
 <body>
     
     <main>
-        <video src="images/5495781-hd_2048_864_30fps.mp4" autoplay muted loop id="bg-vid"></video>
+        
     
         <div class="nav-bar" id="nav-bar">
             <div class="links" id="HOME">
-                <p>H</p>
+                <a href="" style="text-decoration: none; color: white;"><p>H</p></a> <!--THIS IS TURNED INTO A LINK FOR DEBUGGING PURPOSES-->
                 <p>O</p>
                 <p>M</p>
                 <p>E</p>
@@ -56,8 +56,8 @@
             <h1 class="name" id="ln"></h1>
         </div>
 
-        <div class="content-container">
-            <div class="home-content">
+        <div class="content-container" id="content-container">
+            <div class="home-content" id="home-content">
                 <div class="img-subcont">
                     <img src="images/pic1.jpg" alt="">
                 </div>
@@ -68,7 +68,7 @@
                     <img src="images/pic3.jpg" alt="">
                 </div>
             </div>
-            <div class="about-content">
+            <div class="about-content" id="about-content">
                 <div class="about-info">
                     <p>Hello <b>WORLD!</b> I am Samuel, I'm a struggling IT student currently growing in Dalubhasaan
                         ng Lungsod ng Lucena (DLL). I'm also a beginner web developer and a novice programmer.
@@ -87,32 +87,142 @@
                     </div>
                 </div>
             </div>
+            <div class="skills-content" id="skills-content">
+                <div class="skills-img-holder">
+                    <img src="images/html.png" alt="">
+                    <h1>I built this portfolio using HTML, c'mon.</h1>
+                </div>
+                <div class="skills-img-holder">
+                    <img src="images/css.png" alt="">
+                    <h1>I am capable of using css to style my html.</h1>
+                </div>
+                <div class="skills-img-holder">
+                    <img src="images/js.png" alt="">
+                    <h1>Javascript is also part of my skill and continuously improving.</h1>
+                </div>
+                <div class="skills-img-holder">
+                    <img src="images/figma.png" alt="">
+                    <h1>I have basic skills in designing and prototyping using FIgma.</h1>
+                </div>
+                <div class="skills-img-holder">
+                    <img src="images/python.png" alt="">
+                    <h1>I have finished 1st year if college learning Python language.</h1>
+                </div>
+            </div>
+
+            <div class="works-content" id="works-content">
+                <div class="work-subcont">
+                    <div class="work-img-cont">
+                        <img src="images/codstuff.png" alt="">
+                    </div>
+                    <div class="work-info">
+                        <h1>Unnamed</h1>
+                        <p>An attempt to improve hover manipulation with css and no js.</p>
+                        <a href="https://wucebrayn3.github.io/cod-stuff/" target="_blank">Check it out!</a>
+                    </div>
+                </div>
+                <div class="work-subcont">
+                    <div class="work-img-cont">
+                        <img src="images/db 2.png" alt="">
+                    </div>
+                    <div class="work-info">
+                        <h1>DB Coffee Roastery Website</h1>
+                        <p>DB Coffee Roastery's website (our group's work). I developed the entire thing based on my group's design.</p>
+                        <a href="https://wucebrayn3.github.io/PELEC201-Desktop-site/" target="_blank">Check it out!</a>
+                    </div>
+                </div>
+                <div class="work-subcont">
+                    <div class="work-img-cont">
+                        <img src="images/enrollment form.png" alt="">
+                    </div>
+                    <div class="work-info">
+                        <h1>My Enrollment Form</h1>
+                        <p>An enrollment form I designed and developed for my major subject.</p>
+                        <a href="https://wucebrayn3.github.io/STUDENT-ENROLLMENT-FORM---PELEC201/" target="_blank">Check it out!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-content" id="contact-content">
+                <div class="socials">
+                    <h1>MY SOCIALS:</h1>
+                    <div class="my-socials">
+                        <div class="my-socials-subcont" id="myfb">
+                            <img src="images/facebook colored.png" alt="">
+                            <div class="my-socials-info">
+                                <h4>SAMUEL VALDEZ</h4>
+                                <h5>Facebook</h5>
+                            </div>
+                        </div>
+                        <div class="my-socials-subcont" id="myig">
+                            <img src="images/instagram colored.png" alt="">
+                            <div class="my-socials-info">
+                                <h4>MonsieurSamm</h4>
+                                <h5>Instagram</h5>
+                            </div>
+                        </div>
+                        <div class="my-socials-subcont" id="mygh">
+                            <img src="images/github colored.png" alt="">
+                            <div class="my-socials-info">
+                                <h4>wucebrayn3</h4>
+                                <h5>github</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="others">
+                    <h1 id="cool-label">CHECK OUT MY COOL AWESOME AND AMAZING FRIENDS' COOL AWESOME AND AMAZING PORTFOLIOS</h1>
+                    <div class="cool-awesome-amazing-container">
+                        <div class="others-subcont">
+                            <div class="others-img-cont">
+                                <img src="images/jarwin.jpg" alt="">
+                            </div>
+                            <div class="others-info">
+                                <h1>Jerwin's portfolio</h1>
+                                <a href="https://jerwinq19.github.io/quijano-finals-hands-on-exam/" target="_blank">CHECK IT OUT!</a>
+                            </div>
+                        </div>
+                        <div class="others-subcont">
+                            <div class="others-img-cont">
+                                <img src="images/batkagalit.jpg" alt="">
+                            </div>
+                            <div class="others-info">
+                                <h1>Harold's portfolio</h1>
+                                <a href="https://kevinarchive1.github.io/Vele-a-finals-hands-on-exam.github.io/" target="_blank">CHECK IT OUT!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        
 
         <div class="arrow-cont">
             <img src="images/arrow-down-sign-to-navigate.png" alt="" id="arrowdown">
         </div>
 
         <h1 class="inst" id="inst">LOADING...</h1>
+        <div class="vid-cont">
+            <video src="images/5495781-hd_2048_864_30fps.mp4" autoplay muted loop id="bg-vid"></video>
+        </div>
     </main>
 
     <footer id="footer">
         <div class="socials">
-            <div class="socials-subcont">
+            <div class="socials-subcont" id="myfb">
                 <img src="images/facebook.png" alt="" id="fb">
                 <div class="socials-info">
                     <h5>Samuel Valdez</h5>
                     <h6>Facebook</h6>
                 </div>
             </div>
-            <div class="socials-subcont">
+            <div class="socials-subcont" id="myig">
                 <img src="images/instagram.png" alt="" id="ig">
                 <div class="socials-info">
                     <h5>MonsieurSamm</h5>
                     <h6>Instagram</h6>
                 </div>
             </div>
-            <div class="socials-subcont">
+            <div class="socials-subcont" id="mygh">
                 <img src="images/github.png" alt="" id="gh">
                 <div class="socials-info">
                     <h5>wucebrayn3</h5>
@@ -121,7 +231,7 @@
             </div>
         </div>
     </footer>
-
+    
     <script src="index.js"></script>
 
 </body>

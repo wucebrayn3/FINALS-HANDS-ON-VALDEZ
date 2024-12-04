@@ -33,12 +33,18 @@ body::-webkit-scrollbar{
 }
 
 
-#bg-vid{
+.vid-cont{
     position: absolute;
     top: 0;
     left: 0;
-    height: inherit;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
     z-index: -1;
+}
+
+#bg-vid{
+    height: 100vh;
 }
 
 main{
@@ -243,18 +249,249 @@ main{
         }
     }
     & .home-content{
+        position: absolute;
+        left: -100%;
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
+        transition: 0.5s;
+    }
+    & .works-content{
+        position: absolute;
+        left: -100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        transition: 0.5s;
+        color: white;
+        & .work-subcont{
+            margin: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 40%;
+            height: 180px;
+            overflow: hidden;
+            backdrop-filter: blur(11.6px);
+            -webkit-backdrop-filter: blur(11.6px);
+            border: 0.5px rgba(255, 255, 255, 0.5) solid;
+            background-color: rgba(255,255,255,0.1);
+            transition: 0.2s;
+            & h1, p, a{
+                margin: 5px;
+            }
+            & h1{
+                font-family: "MADE tommy bold";
+                font-size: 1.5em;
+            }
+            & p, a{
+                font-family: monospace;
+            }
+            & a{
+                text-decoration: none;
+                text-align: center;
+                color: white;
+                border: 0.5px white solid;
+                transition: 0.3s;
+            }
+            & a:hover{
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            & .work-info{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            & .work-img-cont{
+                width: 50%;
+                height: 100%;
+                & img{
+                    width: 100%;
+                    height: 100%;
+                    padding: 5px;
+                }
+            }
+        }
+        & .work-subcont:hover{
+            transform: scale(1.05);
+            background-color: rgba(255,255,255,0.2);
+        }
+    }
+    & .contact-content{
+        position: absolute;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        color: white;
+        transition: 0.5s;
+        & .socials{
+            display: flex;
+            flex-direction: column;
+            & .my-socials{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                & .my-socials-subcont{
+                    transition: 0.3s;
+                    width: 25%;
+                    backdrop-filter: blur(11.6px);
+                    -webkit-backdrop-filter: blur(11.6px);
+                    border: 0.5px rgba(255, 255, 255, 0.5) solid;
+                    background-color: rgba(255,255,255,0.1);
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    & img{
+                        width: 50px;
+                    }
+                }
+            & .my-socials-subcont:hover{
+                transform: scale(1.05);
+            }
+            }
+            & h1{
+                font-family: "MADE tommy bold";
+                font-size: 1.5em;
+            }
+        }
+        & .others{
+            display: flex;
+            flex-direction: column;
+            & #cool-label{
+                font-family: "MADE tommy bold";
+                font-size: 1.5em;
+            }
+            & .cool-awesome-amazing-container{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: 300px;
+                padding-left: 20px;
+                padding-right: 20px;
+                justify-content: space-evenly;
+                & .others-subcont{
+                    transition: 0.3s;
+                    margin: 0;
+                    padding: 10px;
+                    gap: 20px;
+                    display: flex;
+                    flex-direction: row;
+                    width: 40%;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    backdrop-filter: blur(11.6px);
+                    -webkit-backdrop-filter: blur(11.6px);
+                    border: 0.5px rgba(255, 255, 255, 0.5) solid;
+                    background-color: rgba(255,255,255,0.1);
+                    & .others-img-cont{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 200px;
+                        height: 200px;
+                        overflow: hidden;
+                        & img{
+                            margin: 0;
+                            width: 100%;
+                            aspect-ratio: 1/1;
+                        }
+                    }
+                    & .others-info{
+                        width: 300px;
+                        & h1{
+                            font-family: "MADE tommy bold";
+                        }
+                        & a{
+                            font-family: monospace;
+                            text-decoration: none;
+                            color: white;
+                            border: 0.5px white solid;
+                            padding: 5px;
+                            transition: 0.3s;
+                        }
+                        & a:hover{
+                            background-color: rgba(0, 0, 0, 0.5);
+                        }
+                    }
+                }
+                & .others-subcont:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }
+        *::-webkit-scrollbar{
+            display: none;
+        }
+    }
+    & .contact-content::-webkit-scrollbar{
+        display: none;
+    }
+    & .skills-content{
+        position: absolute;
+        left: -100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        transition: 0.5s;
+        flex-wrap: wrap;
+        & .skills-img-holder{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            width: 15%;
+            padding: 10px;
+            position: relative;
+            backdrop-filter: blur(11.6px);
+            -webkit-backdrop-filter: blur(11.6px);
+            border: 0.5px rgba(255, 255, 255, 0.5) solid;
+            transition: 0.2s;
+            & img{
+                width: 100%;
+                transition: 0.2s
+            };
+            & h1{
+                font-size: 1.5em;
+                font-family: monospace;
+                width: 100%;
+                /* text-align: center; */
+                color: white;
+            }
+        }
+        & .skills-img-holder:hover{
+            transform: scale(1.1);
+        }
+        & .skills-img-holder:hover + .skills-img-holder{
+            transform: scale(1.05);
+        }
+        & .skills-img-holder:hover +*+ .skills-img-holder{
+            transform: scale(1.025);
+        }
+        & .skills-img-holder:has(+.skills-img-holder:hover){
+            transform: scale(1.05);
+        }
+        & .skills-img-holder:has(+*+.skills-img-holder:hover){
+            transform: scale(1.025);
+        }
     }
     & .about-content{
+        position: absolute;
+        left: -100%;
         width: 100%;
         display: flex;
         flex-direction: row;
         padding: 20px;
         gap: 20px;
+        transition: 0.5s;
         & .about-info{
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(11.6px);

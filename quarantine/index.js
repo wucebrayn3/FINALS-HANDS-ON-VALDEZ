@@ -7,6 +7,10 @@ let myFn = "SAMUEL";
 let myLn = "VALDEZ";
 let wc = "WELCOME";
 
+lnH1.addEventListener("click", ()=>{
+    console.log("hayop")
+})
+
 let inst = document.getElementById("inst");
 
 let navbar = document.getElementById("nav-bar");
@@ -19,12 +23,17 @@ arrowdown.style.opacity = "0"
 
 let foot = document.querySelector("footer");
 
-let homecontent = document.getElementById("home-content");
-let aboutcontent = document.getElementById("about-content");
-let skillscontent = document.getElementById("skills-content");
-let workscontent = document.getElementById("works-content");
-let contactcontent = document.getElementById("contact-content");
+let homecontent = document.querySelectorAll(".home-content img");
+homecontent.forEach(a=>{
+    a.style.opacity = "0"
+    a.style.display = "none"
+})
 
+let abtcontent = document.querySelectorAll(".about-content");
+abtcontent.forEach(a=>{
+    a.style.opacity = "0"
+    a.style.display = "none"
+})
 
 function delay(ms){
     return new Promise(resolve=>setTimeout(resolve, ms));
@@ -80,24 +89,16 @@ lnH1.addEventListener("click", ()=>{
     namecont.style.top = "100px"
     lnH1.style.fontSize = "5vw"
     if (lnH1.textContent == "HOME"){
-        homecontent.style.left = "0"
-        homecontent.style.opacity = "1"
+        homecontent.forEach(a=>{
+            a.style.display = ""
+            a.style.opacity = "1"
+        })
     }
     else if (lnH1.textContent == "ABOUT"){
-        aboutcontent.style.left = "0"
-        aboutcontent.style.opacity = "1"
-    }
-    else if (lnH1.textContent == "SKILLS"){
-        skillscontent.style.left = "0"
-        skillscontent.style.opacity = "1"
-    }
-    else if (lnH1.textContent == "WORKS"){
-        workscontent.style.left = "0"
-        workscontent.style.opacity = "1"
-    }
-    else if (lnH1.textContent == "CONTACT"){
-        contactcontent.style.left = "0"
-        contactcontent.style.opacity = "1"
+        abtcontent.forEach(a=>{
+            a.style.display = ""
+            a.style.opacity = "1"
+        })
     }
 })
 
@@ -146,19 +147,19 @@ navbarlinks.forEach(a=>{
             b.style.marginLeft = "0.5em"
         })
     iThinkThisIsATooltip(a.id, wc)
+    if (a.id == "HOME"){
+        
+    }
+    homecontent.forEach(a=>{
+        a.style.display = "none"
+    })
+    abtcontent.forEach(a=>{
+        a.style.opacity = "0"
+        a.style.display = "none"
+    })
     namecont.style.position = ""
     namecont.style.top = ""
     lnH1.style.fontSize = ""
-    homecontent.style.left = "-100%"
-    aboutcontent.style.left = "-100%"
-    skillscontent.style.left = "-100%"
-    workscontent.style.left = "-100%"
-    contactcontent.style.left = "-100%"
-    homecontent.style.opacity = "0"
-    aboutcontent.style.opacity = "0"
-    skillscontent.style.opacity = "0"
-    workscontent.style.opacity = "0"
-    contactcontent.style.opacity = "0"
     })
     a.addEventListener("mouseleave", ()=>{
         a.querySelectorAll("p").forEach(b=>{
@@ -171,6 +172,7 @@ navbarlinks.forEach(a=>{
 
 
 lnH1.addEventListener("mouseenter", ()=>{
+    console.log()
     if (lnH1.textContent == "HOME"){
         inst.style.opacity = "0"
         inst.textContent = "You are HOME."
@@ -245,19 +247,4 @@ gh.addEventListener("mouseenter", ()=>{
 })
 gh.addEventListener("mouseleave", ()=>{
     gh.src = "images/github.png"
-})
-
-let myfb = document.getElementById("myfb");
-let myig = document.getElementById("myig");
-let mygh = document.getElementById("mygh");
-
-myfb.addEventListener("click", ()=>{
-    window.location.href = "https://www.facebook.com/samuel.valdez.98892/"
-    window.location.href.targ = "_blank"
-})
-myig.addEventListener("click", ()=>{
-    window.location.href = "https://www.instagram.com/monsieursamm/"
-})
-mygh.addEventListener("click", ()=>{
-    window.location.href = "https://github.com/wucebrayn3"
 })
