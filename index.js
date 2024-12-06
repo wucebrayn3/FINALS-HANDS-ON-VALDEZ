@@ -250,6 +250,9 @@ gh.addEventListener("mouseleave", ()=>{
 let myfb = document.getElementById("myfb");
 let myig = document.getElementById("myig");
 let mygh = document.getElementById("mygh");
+let myfb2 = document.getElementById("fb2");
+let myig2 = document.getElementById("ig2");
+let mygh2 = document.getElementById("gh2");
 
 myfb.addEventListener("click", ()=>{
     window.location.href = "https://www.facebook.com/samuel.valdez.98892/"
@@ -259,5 +262,15 @@ myig.addEventListener("click", ()=>{
     window.location.href = "https://www.instagram.com/monsieursamm/"
 })
 mygh.addEventListener("click", ()=>{
+    window.location.href = "https://github.com/wucebrayn3"
+})
+myfb2.addEventListener("click", ()=>{
+    window.location.href = "https://www.facebook.com/samuel.valdez.98892/"
+    window.location.href.targ = "_blank"
+})
+myig2.addEventListener("click", ()=>{
+    window.location.href = "https://www.instagram.com/monsieursamm/"
+})
+mygh2.addEventListener("click", ()=>{
     window.location.href = "https://github.com/wucebrayn3"
 })
